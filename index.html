@@ -130,12 +130,13 @@
 
   .hero-name {
     font-family: var(--serif);
-    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    font-size: clamp(2.6rem, 4.8vw, 4.5rem);
     font-weight: 300;
     line-height: 1.05;
     letter-spacing: -0.01em;
     color: var(--white);
     margin-bottom: 1.5rem;
+    white-space: nowrap;
   }
 
   .hero-name em {
@@ -943,6 +944,7 @@
     nav { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
     section { padding: 5rem 1.5rem; }
+    .hero-name { white-space: normal; font-size: clamp(2.2rem, 9vw, 3rem); }
     .hero { grid-template-columns: 1fr; min-height: auto; }
     .hero-left { padding: 8rem 1.5rem 3rem; }
     .hero-right { display: none; }
@@ -976,8 +978,7 @@
   <div class="hero-left">
     <div class="hero-eyebrow">ICF Certified Executive Coach</div>
     <h1 class="hero-name">
-      Ashish<br>
-      <em>Kulkarni</em>
+      Ashish <em>Kulkarni</em>
     </h1>
     <p class="hero-tagline">
       Unlocking leadership potential through certified ICF coaching — grounded in 20+ years of global executive experience.
@@ -1027,11 +1028,8 @@
 
   <div class="coaching-grid">
     <div>
-      <p class="coaching-lead">
-        "My aim is to provide coaching that inspires and guides motivated, passionate people to their best life."
-      </p>
-      <p class="coaching-body">
-        As an ICF Certified Coach and founder of Samaritan Coaching, I partner with leaders to facilitate meaningful, lasting growth. Drawing on 20+ years in global banking and digital transformation, I bring both executive depth and human-centred coaching to every conversation — with you at the centre. Whether you are navigating a leadership transition or seeking deeper purpose, this is your space for reflection and intentional action.
+      <p class="coaching-body" style="font-size: 0.95rem;">
+        I am an ICF Certified Coach and founder of Samaritan Coaching, partnering with leaders to unlock meaningful, lasting growth. My aim is simple: to provide coaching that inspires and guides motivated, passionate people toward their best life. Over 20+ years leading large-scale digital and AI transformations across global banking — from Standard Chartered in Singapore to Emirates NBD in Dubai — I have built a career on translating complexity into clarity, and ambition into measurable outcomes. That same discipline now shapes my coaching practice. I bring executive depth and human-centred presence to every conversation, with you firmly at the centre. Coaching, to me, is not about supplying answers; it is about creating the conditions for you to discover your own truth, sharpen your direction, and act with conviction. Whether you are navigating a leadership transition, stepping into a bigger role, or seeking deeper alignment between your values and your work, I offer a structured yet deeply personal space for reflection, insight, and intentional change. My approach blends strategic rigour with mindful inquiry — helping driven individuals move beyond goals toward genuine self-actualization, sustained well beyond our sessions together.
       </p>
       <div class="icf-badge" style="margin-top:2rem;">
         <div class="badge-icon">ICF</div>
