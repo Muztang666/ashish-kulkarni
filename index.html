@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashish Kulkarni — Executive Coach & Digital Banking Leader</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0B1728;
+    --ink-mid: #112240;
+    --ink-soft: #1D3461;
+    --gold: #2EC4B6;
+    --gold-light: #6EDDD6;
+    --gold-dim: rgba(46,196,182,0.12);
+    --gold-line: rgba(46,196,182,0.28);
+    --cream: #E8F0F7;
+    --cream-warm: #D4E3EF;
+    --white: #F4F9FC;
+    --text-muted: rgba(232,240,247,0.50);
+    --text-soft: rgba(232,240,247,0.75);
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Montserrat', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--ink);
+    color: var(--cream);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 4rem;
+    background: rgba(11,23,40,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--gold-line);
+  }
+
+  .nav-brand {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    color: var(--cream);
+    text-decoration: none;
+  }
+
+  .nav-brand span { color: var(--gold); }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-soft);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold) !important;
+    border: 0.5px solid var(--gold-line);
+    padding: 0.5rem 1.25rem;
+    border-radius: 2px;
+    transition: background 0.3s !important;
+  }
+
+  .nav-cta:hover { background: var(--gold-dim) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10rem 4rem 6rem 6rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 2.5rem;
+    height: 0.5px;
+    background: var(--gold);
+  }
+
+  .hero-name {
+    font-family: var(--serif);
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-name em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-tagline {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--text-soft);
+    max-width: 420px;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.85rem 2.25rem;
+    border: none;
+    border-radius: 2px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  .btn-secondary {
+    color: var(--cream);
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s;
+  }
+
+  .btn-secondary:hover { color: var(--gold); }
+
+  .btn-secondary::after {
+    content: '→';
+    font-size: 1rem;
+    transition: transform 0.3s;
+  }
+
+  .btn-secondary:hover::after { transform: translateX(4px); }
+
+  .btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: #25D366;
+    color: #fff;
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.85rem 2rem;
+    border: none;
+    border-radius: 2px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  .btn-whatsapp:hover { background: #1ebe5d; transform: translateY(-1px); }
+
+  .btn-whatsapp svg { width: 16px; height: 16px; fill: #fff; flex-shrink: 0; }
+
+  .hero-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-portrait-wrap {
+    position: relative;
+    width: 420px;
+    height: 560px;
+  }
+
+  .portrait-frame {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, var(--ink-mid) 0%, var(--ink-soft) 100%);
+    border: 0.5px solid var(--gold-line);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .portrait-initials {
+    font-family: var(--serif);
+    font-size: 8rem;
+    font-weight: 300;
+    color: var(--gold-dim);
+    letter-spacing: -0.04em;
+    position: relative;
+    z-index: 2;
+    line-height: 1;
+  }
+
+  .portrait-decor {
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    width: 220px;
+    height: 220px;
+    border: 0.5px solid var(--gold-line);
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+
+  .portrait-decor-2 {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 150px;
+    height: 150px;
+    border: 0.5px solid var(--gold-line);
+    border-radius: 50%;
+    opacity: 0.35;
+  }
+
+  .frame-corner {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-color: var(--gold);
+    border-style: solid;
+    opacity: 0.7;
+  }
+
+  .frame-corner.tl { top: -8px; left: -8px; border-width: 1px 0 0 1px; }
+  .frame-corner.tr { top: -8px; right: -8px; border-width: 1px 1px 0 0; }
+  .frame-corner.bl { bottom: -8px; left: -8px; border-width: 0 0 1px 1px; }
+  .frame-corner.br { bottom: -8px; right: -8px; border-width: 0 1px 1px 0; }
+
+  .hero-stats {
+    position: absolute;
+    right: -1rem;
+    bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .stat-pill {
+    background: rgba(13,17,23,0.92);
+    border: 0.5px solid var(--gold-line);
+    border-radius: 2px;
+    padding: 0.75rem 1.25rem;
+    text-align: right;
+  }
+
+  .stat-pill .num {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .stat-pill .lbl {
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  .hero-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+
+  /* ── SECTION BASE ── */
+  section {
+    padding: 7rem 6rem;
+  }
+
+  .section-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    max-width: 3rem;
+    height: 0.5px;
+    background: var(--gold);
+  }
+
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(2.4rem, 4vw, 3.5rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title em { font-style: italic; color: var(--gold-light); }
+
+  /* ── COACHING SECTION ── */
+  .coaching {
+    background: var(--ink-mid);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .coaching::before {
+    content: '"';
+    position: absolute;
+    top: -2rem;
+    right: 6rem;
+    font-family: var(--serif);
+    font-size: 24rem;
+    color: rgba(201,168,76,0.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .coaching-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+    margin-top: 3rem;
+  }
+
+  .coaching-lead {
+    font-family: var(--serif);
+    font-size: 1.45rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--cream-warm);
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--gold);
+  }
+
+  .coaching-body {
+    font-size: 0.88rem;
+    color: var(--text-soft);
+    line-height: 1.85;
+    margin-bottom: 1.25rem;
+  }
+
+  .icf-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--gold-dim);
+    border: 0.5px solid var(--gold-line);
+    border-radius: 2px;
+    padding: 0.75rem 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .icf-badge .badge-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .icf-badge .badge-text {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .icf-badge .badge-text strong {
+    display: block;
+    color: var(--gold);
+    font-weight: 500;
+    font-size: 0.75rem;
+  }
+
+  .coaching-pillars {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .pillar-card {
+    background: rgba(13,17,23,0.6);
+    border: 0.5px solid var(--gold-line);
+    border-radius: 3px;
+    padding: 1.75rem 2rem;
+    transition: border-color 0.3s, transform 0.3s;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pillar-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--gold);
+    transform: scaleY(0);
+    transition: transform 0.35s;
+    transform-origin: top;
+  }
+
+  .pillar-card:hover { border-color: var(--gold); transform: translateX(4px); }
+  .pillar-card:hover::before { transform: scaleY(1); }
+
+  .pillar-num {
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--gold-dim);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .pillar-title {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 0.6rem;
+  }
+
+  .pillar-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* ── APPROACH ── */
+  .approach {
+    position: relative;
+  }
+
+  .approach-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .approach-quote {
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--cream);
+    line-height: 1.55;
+    margin: 3rem 0 2rem;
+    position: relative;
+    padding: 0 2rem;
+  }
+
+  .approach-quote::before {
+    content: '"';
+    position: absolute;
+    left: -0.5rem;
+    top: -1rem;
+    font-size: 5rem;
+    color: var(--gold);
+    font-family: var(--serif);
+    line-height: 1;
+    opacity: 0.6;
+  }
+
+  .approach-author {
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4rem;
+  }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--gold-line);
+    border: 0.5px solid var(--gold-line);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 4rem;
+  }
+
+  .step {
+    background: var(--ink);
+    padding: 2.5rem 1.75rem;
+    text-align: left;
+    position: relative;
+  }
+
+  .step-num {
+    font-family: var(--serif);
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--gold-dim);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .step-title {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--gold-light);
+    margin-bottom: 0.6rem;
+  }
+
+  .step-desc {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* ── WHO I WORK WITH ── */
+  .audience {
+    background: var(--ink-mid);
+  }
+
+  .audience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .audience-card {
+    border: 0.5px solid rgba(201,168,76,0.2);
+    border-radius: 3px;
+    padding: 2.5rem;
+    transition: background 0.3s;
+  }
+
+  .audience-card:hover { background: var(--gold-dim); }
+
+  .audience-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--gold-dim);
+    border: 0.5px solid var(--gold-line);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    color: var(--gold);
+  }
+
+  .audience-card h3 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 0.75rem;
+  }
+
+  .audience-card p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+  }
+
+  /* ── CAREER ── */
+  .career {
+    position: relative;
+  }
+
+  .career-intro {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--text-soft);
+    max-width: 620px;
+    margin-bottom: 4rem;
+    line-height: 1.7;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.4rem;
+    bottom: 0;
+    width: 0.5px;
+    background: var(--gold-line);
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-bottom: 3rem;
+    padding-left: 2.5rem;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 0.4rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--ink);
+    border: 1px solid var(--gold);
+    transition: background 0.3s;
+  }
+
+  .timeline-item:hover::before { background: var(--gold); }
+
+  .timeline-date {
+    font-size: 0.63rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+  }
+
+  .timeline-role {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 0.2rem;
+  }
+
+  .timeline-company {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    margin-bottom: 0.85rem;
+  }
+
+  .timeline-highlights {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .timeline-highlights li {
+    font-size: 0.82rem;
+    color: var(--text-soft);
+    padding-left: 1rem;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .timeline-highlights li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 0.7rem;
+  }
+
+  /* ── METRICS BAND ── */
+  .metrics {
+    background: var(--gold);
+    padding: 3.5rem 6rem;
+  }
+
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .metric-item .metric-num {
+    font-family: var(--serif);
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(11,23,40,0.65);
+  }
+
+  /* ── SPEAKING ── */
+  .speaking {
+    background: var(--ink-mid);
+  }
+
+  .speaking-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+    align-items: center;
+  }
+
+  .speaking-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .speaking-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: 0.88rem;
+    color: var(--text-soft);
+  }
+
+  .speaking-list li::before {
+    content: '◆';
+    color: var(--gold);
+    font-size: 0.5rem;
+    margin-top: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .expertise-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 2rem;
+  }
+
+  .tag {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 0.5px solid var(--gold-line);
+    border-radius: 2px;
+    padding: 0.4rem 0.85rem;
+    background: var(--gold-dim);
+  }
+
+  /* ── CTA ── */
+  .cta-section {
+    text-align: center;
+    padding: 8rem 6rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(201,168,76,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cta-ornament {
+    font-family: var(--serif);
+    font-size: 0.85rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+  }
+
+  .cta-section h2 {
+    font-family: var(--serif);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-section h2 em { font-style: italic; color: var(--gold-light); }
+
+  .cta-section p {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--text-soft);
+    max-width: 500px;
+    margin: 0 auto 3rem;
+    line-height: 1.65;
+  }
+
+  .cta-divider {
+    width: 60px;
+    height: 0.5px;
+    background: var(--gold);
+    margin: 2.5rem auto;
+  }
+
+  .contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .contact-item {
+    text-align: center;
+  }
+
+  .contact-item .ci-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.35rem;
+  }
+
+  .contact-item .ci-value {
+    font-size: 0.88rem;
+    color: var(--cream);
+  }
+
+  .contact-item a {
+    color: var(--cream);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .contact-item a:hover { color: var(--gold); }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 0.5px solid var(--gold-line);
+    padding: 2rem 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+  }
+
+  footer a { color: var(--gold); text-decoration: none; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow { animation: fadeUp 0.8s ease 0.2s both; }
+  .hero-name { animation: fadeUp 0.8s ease 0.4s both; }
+  .hero-tagline { animation: fadeUp 0.8s ease 0.6s both; }
+  .hero-actions { animation: fadeUp 0.8s ease 0.8s both; }
+  .hero-portrait-wrap { animation: fadeUp 0.8s ease 0.5s both; }
+  .hero-stats { animation: fadeUp 0.8s ease 0.9s both; }
+
+  /* ── MOBILE ── */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    section { padding: 5rem 1.5rem; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 8rem 1.5rem 3rem; }
+    .hero-right { display: none; }
+    .coaching-grid, .speaking-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .audience-grid { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr 1fr; }
+    .metrics { padding: 2.5rem 1.5rem; }
+    .metrics-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .cta-section { padding: 5rem 1.5rem; }
+    footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
+    .contact-info { gap: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-brand">Ashish <span>Kulkarni</span></a>
+  <ul class="nav-links">
+    <li><a href="#coaching">Coaching</a></li>
+    <li><a href="#approach">Approach</a></li>
+    <li><a href="#career">Experience</a></li>
+    <li><a href="#connect" class="nav-cta">Begin Your Journey</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home" style="padding:0;">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-left">
+    <div class="hero-eyebrow">ICF Certified Executive Coach</div>
+    <h1 class="hero-name">
+      Ashish<br>
+      <em>Kulkarni</em>
+    </h1>
+    <p class="hero-tagline">
+      Unlocking leadership potential through certified ICF coaching — grounded in 20+ years of global executive experience.
+    </p>
+    <div class="hero-actions">
+      <a href="#connect" class="btn-primary">Book a Discovery Session</a>
+      <a href="https://wa.me/971508898614" target="_blank" class="btn-whatsapp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a href="#coaching" class="btn-secondary">Explore Coaching</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-portrait-wrap">
+      <div class="portrait-frame">
+        <div class="portrait-decor"></div>
+        <div class="portrait-decor-2"></div>
+        <div class="portrait-initials">AK</div>
+      </div>
+      <div class="frame-corner tl"></div>
+      <div class="frame-corner tr"></div>
+      <div class="frame-corner bl"></div>
+      <div class="frame-corner br"></div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-pill">
+        <div class="num">20+</div>
+        <div class="lbl">Years Leading</div>
+      </div>
+      <div class="stat-pill">
+        <div class="num">ICF</div>
+        <div class="lbl">Certified Coach</div>
+      </div>
+      <div class="stat-pill">
+        <div class="num">Global</div>
+        <div class="lbl">Presence</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COACHING -->
+<section class="coaching" id="coaching">
+  <div class="section-label">Coaching Practice</div>
+  <h2 class="section-title">Coaching That <em>Transforms</em></h2>
+
+  <div class="coaching-grid">
+    <div>
+      <p class="coaching-lead">
+        "My aim is to provide coaching that inspires and guides motivated, passionate people to their best life."
+      </p>
+      <p class="coaching-body">
+        As an ICF Certified Coach and founder of Samaritan Coaching, I partner with leaders to facilitate meaningful, lasting growth. Drawing on 20+ years in global banking and digital transformation, I bring both executive depth and human-centred coaching to every conversation — with you at the centre. Whether you are navigating a leadership transition or seeking deeper purpose, this is your space for reflection and intentional action.
+      </p>
+      <div class="icf-badge" style="margin-top:2rem;">
+        <div class="badge-icon">ICF</div>
+        <div class="badge-text">
+          <strong>International Coaching Federation</strong>
+          Certified Professional Coach
+        </div>
+      </div>
+    </div>
+
+    <div class="coaching-pillars">
+      <div class="pillar-card">
+        <div class="pillar-num">01</div>
+        <div class="pillar-title">Mindfulness & Presence</div>
+        <p class="pillar-desc">Cultivating awareness of the present moment to navigate complexity with clarity and intentionality — the foundation of genuine leadership.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-num">02</div>
+        <div class="pillar-title">Executive Leadership</div>
+        <p class="pillar-desc">Unlocking your leadership potential with a proven framework developed across 20+ years of driving multi-market transformations at scale.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-num">03</div>
+        <div class="pillar-title">Career & Life Transitions</div>
+        <p class="pillar-desc">Navigating pivotal moments — promotions, career shifts, personal reinvention — with confidence, purpose, and strategic clarity.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-num">04</div>
+        <div class="pillar-title">Self-Actualization</div>
+        <p class="pillar-desc">Moving beyond goals into a life aligned with your deepest values and authentic self — the summit of human potential.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="approach" id="approach">
+  <div class="approach-inner">
+    <div class="section-label">The Coaching Journey</div>
+    <h2 class="section-title">My <em>Approach</em></h2>
+
+    <blockquote class="approach-quote">
+      The coachee is at the centre of all conversations. My role is to hold the space, ask the right questions, and walk alongside you.
+    </blockquote>
+    <div class="approach-author">— Ashish Kulkarni, ICF Certified Coach</div>
+
+    <p style="font-size: 0.9rem; color: var(--text-soft); max-width: 620px; margin: 0 auto 1rem; text-align: center; line-height: 1.8;">
+      I facilitate a structured yet fluid process where your answers emerge from your own wisdom — grounded in deep listening, radical curiosity, and a commitment to your growth.
+    </p>
+  </div>
+
+  <div class="process-steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-title">Discovery</div>
+      <p class="step-desc">A deep-dive conversation to understand your world, your aspirations, and the landscape of your current reality.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-title">Clarity</div>
+      <p class="step-desc">Illuminating patterns, beliefs, and opportunities that shape your path — bringing intention into focus.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-title">Action</div>
+      <p class="step-desc">Co-creating a purposeful roadmap with clear commitments, accountability structures, and measurable milestones.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div class="step-title">Integration</div>
+      <p class="step-desc">Embedding new ways of thinking and being into daily leadership practice — sustaining transformation long-term.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHO I WORK WITH -->
+<section class="audience">
+  <div class="section-label">Who I Work With</div>
+  <h2 class="section-title">Built for <em>Leaders</em></h2>
+
+  <div class="audience-grid">
+    <div class="audience-card">
+      <div class="audience-icon">⬡</div>
+      <h3>Senior Executives</h3>
+      <p>C-suite and Director-level leaders navigating complex organizations, managing high-performing teams, and seeking to lead with greater presence and impact.</p>
+    </div>
+    <div class="audience-card">
+      <div class="audience-icon">◈</div>
+      <h3>Emerging Leaders</h3>
+      <p>High-potential individuals stepping into leadership for the first time — building confidence, identity, and the habits of extraordinary leadership.</p>
+    </div>
+    <div class="audience-card">
+      <div class="audience-icon">◇</div>
+      <h3>Purpose Seekers</h3>
+      <p>Motivated individuals at a crossroads — re-evaluating direction, seeking deeper meaning, and ready to design a life aligned with their highest values.</p>
+    </div>
+  </div>
+</section>
+
+<!-- METRICS BAND -->
+<div class="metrics">
+  <div class="metrics-grid">
+    <div class="metric-item">
+      <div class="metric-num">20+</div>
+      <div class="metric-lbl">Years Experience</div>
+    </div>
+    <div class="metric-item">
+      <div class="metric-num">1.5M</div>
+      <div class="metric-lbl">Users Impacted</div>
+    </div>
+    <div class="metric-item">
+      <div class="metric-num">16</div>
+      <div class="metric-lbl">Global Markets</div>
+    </div>
+    <div class="metric-item">
+      <div class="metric-num">ICF</div>
+      <div class="metric-lbl">Certified Coach</div>
+    </div>
+    <div class="metric-item">
+      <div class="metric-num">2019</div>
+      <div class="metric-lbl">Best Use of AI Award</div>
+    </div>
+  </div>
+</div>
+
+<!-- CAREER -->
+<section class="career" id="career">
+  <div class="section-label">Professional Journey</div>
+  <h2 class="section-title">Two Decades of <em>Global Impact</em></h2>
+  <p class="career-intro">
+    A distinguished career at the intersection of digital transformation, AI innovation, and customer experience — spanning the world's leading financial institutions.
+  </p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-date">Oct 2022 — Present</div>
+      <div class="timeline-role">Senior Director & Global Product Owner — Omnichannel & Conversational Banking</div>
+      <div class="timeline-company">Emirates NBD Group · Dubai, UAE</div>
+      <ul class="timeline-highlights">
+        <li>AED 43M business impact through non-voice channel leadership across WhatsApp, web, mobile & social</li>
+        <li>Scaled platform to 1.5M users and 250K monthly active customers</li>
+        <li>200% YoY sales growth via STP-based sales journeys and advanced attribution models</li>
+        <li>65%+ automation containment · 70% CSAT · 52% First Contact Resolution</li>
+      </ul>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">Sep 2015 — Oct 2022</div>
+      <div class="timeline-role">Director & Product Owner — Digital Banking, Social Media & Conversational AI</div>
+      <div class="timeline-company">Standard Chartered Bank · Singapore</div>
+      <ul class="timeline-highlights">
+        <li>Awarded Best Use of AI (The Digital Banker, 2019) for "Stacy" — SCB's Virtual Assistant</li>
+        <li>Generated $0.5M revenue and $0.8M cost savings in year one post-launch</li>
+        <li>Oversaw social media engagement across 16 markets, improving sentiment and digital sales</li>
+        <li>Led Voice Biometrics rollout across India, UAE, Malaysia & Singapore with $2M project budget</li>
+      </ul>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">May 2010 — Aug 2015</div>
+      <div class="timeline-role">Senior Manager — Regional Contact Center Operations</div>
+      <div class="timeline-company">Scope International (Standard Chartered Bank)</div>
+      <ul class="timeline-highlights">
+        <li>Led large-scale contact centre operations across the Asia-Pacific region</li>
+        <li>Drove process re-engineering and operational excellence initiatives</li>
+      </ul>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2000 — 2010</div>
+      <div class="timeline-role">Early Career Foundation</div>
+      <div class="timeline-company">ICICI Bank · TATA-AIG · GE Capital · HCL Infosystems</div>
+      <ul class="timeline-highlights">
+        <li>Built foundational expertise in operations, sales, analytics and customer acquisition</li>
+        <li>Developed cross-industry perspective across banking, insurance, and technology sectors</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="expertise-tags" style="margin-top: 3rem;">
+    <span class="tag">Conversational AI</span>
+    <span class="tag">Digital Banking</span>
+    <span class="tag">Omnichannel Strategy</span>
+    <span class="tag">Product Ownership</span>
+    <span class="tag">CX Transformation</span>
+    <span class="tag">Agile · Scrum</span>
+    <span class="tag">Voice Biometrics</span>
+    <span class="tag">NLP & Chatbots</span>
+    <span class="tag">P&L Management</span>
+    <span class="tag">PMP · CSPO · CSM</span>
+  </div>
+</section>
+
+<!-- SPEAKING -->
+<section class="speaking">
+  <div class="section-label">Industry Voice</div>
+  <h2 class="section-title">Thought <em>Leadership</em></h2>
+
+  <div class="speaking-grid">
+    <div>
+      <p style="font-size: 0.9rem; color: var(--text-soft); line-height: 1.85; margin-bottom: 2rem;">
+        A recognised voice in Conversational AI and Digital CX — Ashish has spoken at global stages on how technology and human-centred design intersect to transform customer experiences.
+      </p>
+      <ul class="speaking-list">
+        <li>Keynote Speaker — Chatbot, Call Center & Digital Customer Service Conferences</li>
+        <li>Panelist — Finovate Asia & Asia Chatbots Conference</li>
+        <li>Speaker — Voice Bot Asia Summit</li>
+        <li>Panelist — European Chatbot & Conversational AI Summit</li>
+        <li>Speaker — MENA Conversational AI Summit</li>
+      </ul>
+    </div>
+    <div>
+      <div style="border: 0.5px solid var(--gold-line); border-radius: 3px; padding: 2.5rem; background: rgba(13,17,23,0.5);">
+        <div class="section-label" style="margin-bottom: 1rem;">Certifications & Education</div>
+        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <div>
+            <div style="font-family: var(--serif); font-size: 1.05rem; color: var(--cream); margin-bottom: 0.2rem;">ICF Certified Coach</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); letter-spacing: 0.05em;">International Coaching Federation · Samaritan Coaching</div>
+          </div>
+          <div style="height:0.5px; background: var(--gold-line);"></div>
+          <div>
+            <div style="font-family: var(--serif); font-size: 1.05rem; color: var(--cream); margin-bottom: 0.2rem;">PMP Certified</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">Project Management Professional · 2021</div>
+          </div>
+          <div style="height:0.5px; background: var(--gold-line);"></div>
+          <div>
+            <div style="font-family: var(--serif); font-size: 1.05rem; color: var(--cream); margin-bottom: 0.2rem;">Scrum Master (CSM) & Product Owner (CSPO)</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">Scrum Alliance · Singapore · 2018–2019</div>
+          </div>
+          <div style="height:0.5px; background: var(--gold-line);"></div>
+          <div>
+            <div style="font-family: var(--serif); font-size: 1.05rem; color: var(--cream); margin-bottom: 0.2rem;">Bachelor of Science</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">Osmania University, Hyderabad, India · 1996–2000</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="connect">
+  <div class="cta-ornament">Begin Your Journey</div>
+  <h2>Ready to Step Into<br><em>Your Best Life?</em></h2>
+  <div class="cta-divider"></div>
+  <p>Every extraordinary journey begins with a single conversation. Let's discover what is possible for you.</p>
+  <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+    <a href="https://wa.me/971508898614" target="_blank" class="btn-whatsapp" style="font-size:0.72rem; padding:0.95rem 2.5rem;">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:18px;height:18px;fill:#fff;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Chat on WhatsApp
+    </a>
+    <a href="mailto:ashish.kulkarni@outlook.com" class="btn-primary" style="font-size:0.72rem;">Send an Email</a>
+  </div>
+
+  <div class="contact-info">
+    <div class="contact-item">
+      <div class="ci-label">Phone</div>
+      <div class="ci-value"><a href="tel:+971508898614">+971 508 898 614</a></div>
+    </div>
+    <div class="contact-item">
+      <div class="ci-label">Email</div>
+      <div class="ci-value"><a href="mailto:ashish.kulkarni@outlook.com">ashish.kulkarni@outlook.com</a></div>
+    </div>
+    <div class="contact-item">
+      <div class="ci-label">Connect</div>
+      <div class="ci-value"><a href="https://www.linkedin.com/in/ashishkulkarni-31/" target="_blank">LinkedIn Profile →</a></div>
+    </div>
+    <div class="contact-item">
+      <div class="ci-label">Based in</div>
+      <div class="ci-value">Dubai, UAE</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>© 2026 Ashish Kulkarni. All rights reserved.</div>
+  <div>ICF Certified Coach · Senior Digital Banking Leader</div>
+  <div><a href="https://www.linkedin.com/in/ashishkulkarni-31/" target="_blank">LinkedIn</a></div>
+</footer>
+
+<script>
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.borderBottomColor = window.scrollY > 40
+      ? 'rgba(46,196,182,0.5)'
+      : 'rgba(46,196,182,0.28)';
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.pillar-card, .audience-card, .timeline-item, .step').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
