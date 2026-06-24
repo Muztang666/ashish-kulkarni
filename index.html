@@ -32,13 +32,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #F4F6FB;
-    --ink-mid: #E9EDF6;
-    --ink-soft: #DCE3F0;
+    --ink: #FFFFFF;
+    --ink-mid: #F7F8FA;
+    --ink-soft: #EDEFF3;
     --gold: #14207A;
     --gold-light: #2B3AA8;
     --gold-dim: rgba(20,32,122,0.08);
-    --gold-line: rgba(20,32,122,0.28);
+    --gold-line: rgba(20,32,122,0.45);
     --cream: #1B2240;
     --cream-warm: #131A33;
     --white: #10173A;
@@ -83,7 +83,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 4rem;
-    background: rgba(244,246,251,0.92);
+    background: rgba(255,255,255,0.92);
     backdrop-filter: blur(12px);
     border-bottom: 0.5px solid var(--gold-line);
   }
@@ -141,7 +141,7 @@
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--gold) !important;
-    border: 0.5px solid var(--gold-line);
+    border: 1.5px solid var(--gold);
     padding: 0.5rem 1.25rem;
     border-radius: 2px;
     transition: background 0.3s !important;
@@ -163,7 +163,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 8rem 3rem 3rem 6rem;
+    padding: 8rem 1.5rem 3rem 6rem;
     position: relative;
     z-index: 2;
   }
@@ -290,7 +290,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: 2.5rem;
-    padding: 6.5rem 4rem 3rem 1rem;
+    padding: 6.5rem 6rem 3rem 0;
     overflow: hidden;
   }
 
@@ -447,8 +447,8 @@
   .frame-corner.br { bottom: -8px; right: -8px; border-width: 0 1px 1px 0; }
 
   .stat-pill {
-    background: rgba(244,246,251,0.85);
-    border: 0.5px solid var(--gold-line);
+    background: rgba(255,255,255,0.85);
+    border: 1px solid var(--gold-line);
     border-radius: 2px;
     padding: 0.75rem 1.25rem;
     text-align: right;
@@ -484,6 +484,8 @@
   section {
     padding: 2rem 6rem 3rem;
     position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
   }
 
   section::after {
@@ -649,7 +651,7 @@
     font-family: var(--serif);
     font-size: 2.5rem;
     font-weight: 300;
-    color: var(--gold-dim);
+    color: rgba(20,32,122,0.22);
     line-height: 1;
     margin-bottom: 0.5rem;
   }
@@ -741,7 +743,7 @@
 
   .step {
     background: rgba(255,255,255,0.45);
-    border: 0.5px solid var(--gold-line);
+    border: 1px solid var(--gold-line);
     border-radius: 4px;
     padding: 1.75rem 1.5rem;
     text-align: left;
@@ -752,7 +754,7 @@
     font-family: var(--serif);
     font-size: 3.5rem;
     font-weight: 300;
-    color: var(--gold-dim);
+    color: rgba(20,32,122,0.22);
     line-height: 1;
     margin-bottom: 1rem;
   }
@@ -783,7 +785,7 @@
   }
 
   .audience-card {
-    border: 0.5px solid var(--gold-line);
+    border: 1px solid var(--gold-line);
     border-radius: 3px;
     padding: 2.5rem;
     background: rgba(255,255,255,0.4);
@@ -1036,7 +1038,7 @@
     flex: 0 0 380px;
     scroll-snap-align: start;
     background: rgba(255,255,255,0.6);
-    border: 0.5px solid var(--gold-line);
+    border: 1px solid var(--gold-line);
     border-radius: 4px;
     padding: 2.5rem 2.25rem 2rem;
     display: flex;
@@ -1218,6 +1220,9 @@
     font-size: 0.7rem;
     color: var(--text-muted);
     letter-spacing: 0.08em;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
 
   footer a { color: var(--gold); text-decoration: none; }
@@ -1243,8 +1248,8 @@
     .nav-cta { padding: 0.45rem 0.9rem; white-space: nowrap; }
     .nav-tagline { display: none; }
     .hero { grid-template-columns: 1fr 0.85fr; }
-    .hero-left { padding: 7rem 2rem 2.5rem 2.5rem; }
-    .hero-right { padding: 5.5rem 1.25rem 2.5rem 0.5rem; gap: 1.25rem; }
+    .hero-left { padding: 7rem 1.25rem 2.5rem 2.5rem; }
+    .hero-right { padding: 5.5rem 2.5rem 2.5rem 0; gap: 1.25rem; }
     .hero-portrait-wrap { width: 190px; height: 240px; }
     .hero-stats-row { flex-wrap: wrap; gap: 0.4rem; }
     .hero-stats-row .stat-pill { padding: 0.5rem 0.55rem; }
@@ -1367,7 +1372,6 @@
 <section class="hero" id="home" style="padding:0;">
   <div class="hero-bg-grid"></div>
   <div class="hero-left" id="about">
-    <div class="hero-eyebrow">ICF Certified Executive Coach</div>
     <h1 class="about-title-hero">A Coach Who Has <em>Lived It</em></h1>
     <div class="about-body">
       <p>Ashish Kulkarni is an ICF-certified Executive Coach, dedicated to helping individuals navigate transitions, sharpen decision-making, and grow into the next version of themselves. His coaching practice is grounded in deep listening, structured reflection, and a belief that every leader already holds the answers — his role is to help them find clarity and act with confidence.</p>
