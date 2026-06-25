@@ -694,6 +694,8 @@
 
   .approach {
     position: relative;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .approach-inner {
@@ -709,7 +711,7 @@
     font-style: italic;
     color: var(--cream);
     line-height: 1.55;
-    margin: 2rem 0 1.25rem;
+    margin: 1.25rem 0 1rem;
     position: relative;
     padding: 0 2rem;
   }
@@ -731,14 +733,14 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
   }
 
   .process-steps {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
   }
 
   .step {
@@ -775,13 +777,15 @@
   /* ── WHO I WORK WITH ── */
   .audience {
     background: var(--ink-mid);
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .audience-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 1.25rem;
   }
 
   .audience-card {
@@ -840,6 +844,15 @@
     max-width: 620px;
     margin-bottom: 4rem;
     line-height: 1.7;
+  }
+
+  .testimonials-intro {
+    max-width: 920px;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 1340px) {
+    .testimonials-intro { white-space: normal; max-width: 620px; }
   }
 
   .timeline {
@@ -1127,7 +1140,7 @@
   /* ── CTA ── */
   .cta-section {
     text-align: center;
-    padding: 4rem 6rem;
+    padding: 2.25rem 6rem;
     position: relative;
     overflow: hidden;
   }
@@ -1146,7 +1159,7 @@
     letter-spacing: 0.35em;
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
   }
 
   .cta-section h2 {
@@ -1155,7 +1168,7 @@
     font-weight: 300;
     color: var(--white);
     line-height: 1.2;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .cta-section h2 em { font-style: italic; color: var(--gold-light); }
@@ -1166,7 +1179,7 @@
     font-style: italic;
     color: var(--text-soft);
     max-width: 500px;
-    margin: 0 auto 3rem;
+    margin: 0 auto 1.75rem;
     line-height: 1.65;
   }
 
@@ -1174,7 +1187,7 @@
     width: 60px;
     height: 0.5px;
     background: var(--gold);
-    margin: 2.5rem auto;
+    margin: 1.5rem auto;
   }
 
   .contact-info {
@@ -1421,7 +1434,6 @@
 <!-- APPROACH -->
 <section class="approach" id="approach">
   <div class="approach-inner">
-    <div class="section-label">The Coaching Journey</div>
     <h2 class="section-title">My <em>Approach</em></h2>
 
     <blockquote class="approach-quote">
@@ -1457,7 +1469,7 @@
     </div>
   </div>
 
-  <div class="coaching-pillars" style="max-width: 1000px; margin: 2rem auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+  <div class="coaching-pillars" style="max-width: 1000px; margin: 1.25rem auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
     <div class="pillar-card">
       <div class="pillar-num">01</div>
       <div class="pillar-title">Mindfulness & Presence</div>
@@ -1478,7 +1490,6 @@
 
 <!-- WHO I WORK WITH -->
 <section class="audience">
-  <div class="section-label">Executive &amp; Leadership Coaching</div>
   <h2 class="section-title">Built for <em>Leaders</em></h2>
 
   <div class="audience-grid">
@@ -1502,9 +1513,8 @@
 
 <!-- TESTIMONIALS -->
 <section class="testimonials" id="testimonials">
-  <div class="section-label">Client Voices</div>
   <h2 class="section-title">Stories of <em>Transformation</em></h2>
-  <p class="career-intro">
+  <p class="career-intro testimonials-intro">
     The true measure of coaching is not in what is said, but in what changes. Here is what those I've walked alongside have to say.
   </p>
 
